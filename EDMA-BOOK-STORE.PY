@@ -1,17 +1,40 @@
-# initial Data of inventory
-
+# Initial Data of inventory
 menu_items = {
     'food': ['pastries', 'desserts', 'wraps', 'savouries', 'pasta'],
-    'drinks': ['Fresh Juice', 'smoothies', 'Coffee', 'matcha', 'energy drink'] 
+    'drinks': ['Fresh Juice', 'smoothies', 'Coffee', 'matcha', 'energy drink']
 }
-book_list = ['Game of Thrones', 'Power', 'lion', 'Emotional intelligence'] 
+book_list = ['Game of Thrones', 'Power', 'Lion', 'Emotional Intelligence']
 
-## customer data functions
+# List to store customer orders
+orders = []
 
-def displayMenu_andbooks():
-    print("Food Menu:", menu_items['food'])
-    print("Drink Menu:", menu_items['drinks'])
-    print("Books Availiable:", book_list)
+# Function to display menu items
+def display_menu_and_books():
+    print("\n--- Menu ---")
+    print("Food Menu:", ", ".join(menu_items['food']))
+    print("Drink Menu:", ", ".join(menu_items['drinks']))
+    print("Books Available:", ", ".join(book_list))
+    print("\n")
+
+# Function to collect customer orders
+def order_collect():
+    print("Please choose your items from the following menu.")
+    
+    # Display the menu
+    display_menu_and_books()
+
+    # Collect food choices
+    food_choices = input("Enter the food items you'd like to order (comma separated): ").split(',')
+    food_choices = [item.strip() for item in food_choices if item.strip() in menu_items['food']]
+
+    # Collect drink choices
+    drink_choices = input("Enter the drinks you'd like to order (comma separated): ").split(',')
+    drink_choices = [item.strip() for item in drink_choices if item.strip() in menu_items['drinks']]
+
+    # Collect book choices
+    book_choices = input("Enter the books you'd like to order (comma separated): ").split(',')
+    book_choices = [item.strip() for item in book_choices if item.strip() in book_list]
+
 
 def order_collect():
      print("Choose your food and drink from our food menu")
