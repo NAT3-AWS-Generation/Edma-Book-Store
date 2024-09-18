@@ -52,3 +52,4 @@ def main():
         elif user_choice == "2":
             display_menu_and_books()
 
+main()
