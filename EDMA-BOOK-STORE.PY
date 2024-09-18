@@ -49,7 +49,7 @@ def main():
         user_choice = input("Select option 1 or 2: ")
         if user_choice == "2":
             break
-        elif user_choice == "2":
+        elif user_choice == "1":
             display_menu_and_books()
 
 main()
