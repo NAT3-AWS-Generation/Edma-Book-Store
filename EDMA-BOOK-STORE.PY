@@ -34,26 +34,34 @@ def order_collect():
     # Collect book choices
     book_choices = input("Enter the books you'd like to order (comma separated): ").split(',')
     book_choices = [item.strip() for item in book_choices if item.strip() in book_list]
-<<<<<<< HEAD
-    
-=======
 
+    #customer details
+    customer_name = input ("Enter your name:").strip()
+    customer_address = input("Enter your address:").strip()
 
-def order_collect():
-     print("Choose your food and drink from our food menu")
-     food_choices = input().split(',')
+    food_choices = []
 
-def main():
-    while True:
-        print("Welcome to Edma's book store!")
-        print("1. View menu and place order")
-        print("2. Quit")
+    # Customer details
+    customer_name = input("Enter your name: ")
+    customer_address = input("Enter your address: ")
 
-        user_choice = input("Select option 1 or 2: ")
-        if user_choice == "2":
-            break
-        elif user_choice == "1":
-            display_menu_and_books()
+    # Store the order
+    order = {
+        'name': customer_name,
+        'address': customer_address,
+        'food': food_choices,
+        'drinks': drink_choices,
+        'books': book_choices
+    }
 
-main()
->>>>>>> debfe9721e108941133823835373bbb718750ff7
+    # Append the order to the orders list
+    orders.append(order)
+
+    # Confirmation message
+    print("\n--- Order Summary ---")
+    print(f"Customer Name: {customer_name}")
+    print(f"Food Items: {', '.join(food_choices) if food_choices else 'None'}")
+    print(f"Drink Items: {', '.join(drink_choices) if drink_choices else 'None'}")
+    print(f"Books Ordered: {', '.join(book_choices) if book_choices else 'None'}")
+    print(f"Delivery Address: {customer_address}\n")
+    print("Your order has been placed! Thank you.\n")
