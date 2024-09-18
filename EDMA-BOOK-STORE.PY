@@ -40,6 +40,15 @@ def order_collect():
      print("Choose your food and drink from our food menu")
      food_choices = input().split(',')
 
+def main():
+    while True:
+        print("Welcome to Edma's book store!")
+        print("1. View menu and place order")
+        print("2. Quit")
 
-
+        user_choice = input("Select option 1 or 2: ")
+        if user_choice == "2":
+            break
+        elif user_choice == "2":
+            display_menu_and_books()
 
