@@ -34,4 +34,26 @@ def order_collect():
     # Collect book choices
     book_choices = input("Enter the books you'd like to order (comma separated): ").split(',')
     book_choices = [item.strip() for item in book_choices if item.strip() in book_list]
+<<<<<<< HEAD
     
+=======
+
+
+def order_collect():
+     print("Choose your food and drink from our food menu")
+     food_choices = input().split(',')
+
+def main():
+    while True:
+        print("Welcome to Edma's book store!")
+        print("1. View menu and place order")
+        print("2. Quit")
+
+        user_choice = input("Select option 1 or 2: ")
+        if user_choice == "2":
+            break
+        elif user_choice == "1":
+            display_menu_and_books()
+
+main()
+>>>>>>> debfe9721e108941133823835373bbb718750ff7
