@@ -36,8 +36,8 @@ def order_collect():
     book_choices = [item.strip() for item in book_choices if item.strip() in book_list]
 
     #customer details
-    customer_name = input ("Enter your name:").strip()
-    customer_address = input("Enter your address:").strip()
+    customer_name = input ("Enter your name:")
+    customer_address = input("Enter your address:")
 
     food_choices = []
 
@@ -65,3 +65,20 @@ def order_collect():
     print(f"Books Ordered: {', '.join(book_choices) if book_choices else 'None'}")
     print(f"Delivery Address: {customer_address}\n")
     print("Your order has been placed! Thank you.\n")
+def main():
+    while True:
+        print("Welcome to the Book Cafe!")
+        print("1. View Menu and Place Order")
+        print("2. Quit")
+        
+        choice = input("Please choose an option (1 or 2): ")
+
+        if choice == "1":
+            order_collect()
+        elif choice == "2":
+            print("Thank you for visiting the Book Cafe!")
+            break
+        else:
+            print("Invalid option, please try again.\n")
+
+    
